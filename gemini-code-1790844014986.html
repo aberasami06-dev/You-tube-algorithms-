@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>YouTube Alog | Learn, Create & Grow Online</title>
+  <meta name="description" content="Digital creator platform providing practical tips, technical guides, step-by-step tutorials, honest reviews, and tools for YouTube, technology, and digital business." />
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              red: '#FF0000',
+              darkRed: '#CC0000',
+              dark: '#0F0F0F',
+              cardDark: '#1F1F1F',
+              borderDark: '#2D2D2D'
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Google AdSense Header Script Placeholder -->
+  <!-- REPLACE 'ca-pub-XXXXXXXXXXXXXXXX' WITH YOUR ACTUAL ADSENSE CLIENT ID -->
+  <!-- 
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script>
+  -->
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+    body { font-family: 'Inter', sans-serif; }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-900 dark:bg-brand-dark dark:text-gray-100 transition-colors duration-200">
+
+  <!-- ================= HEADER / NAVIGATION ================= -->
+  <header class="sticky top-0 z-50 backdrop-blur-md bg-white/90 dark:bg-brand-dark/90 border-b border-gray-200 dark:border-brand-borderDark">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      
+      <!-- Logo -->
+      <a href="#" class="flex items-center space-x-2">
+        <div class="bg-brand-red text-white p-2 rounded-lg shadow-md">
+          <i data-lucide="play" class="w-5 h-5 fill-current"></i>
+        </div>
+        <span class="text-xl font-bold tracking-tight">YouTube <span class="text-brand-red">Alog</span></span>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="hidden md:flex items-center space-x-8 text-sm font-medium">
+        <a href="#topics" class="hover:text-brand-red transition">Topics</a>
+        <a href="#articles" class="hover:text-brand-red transition">Guides & Articles</a>
+        <a href="#reviews" class="hover:text-brand-red transition">Honest Reviews</a>
+        <a href="#tools" class="hover:text-brand-red transition">Creator Tools</a>
+        <a href="#equipment" class="hover:text-brand-red transition">Gear Hub</a>
+      </nav>
+
+      <!-- Right Action Items -->
+      <div class="flex items-center space-x-4">
+        <!-- Dark Mode Toggle -->
+        <button id="themeToggle" aria-label="Toggle Theme" class="p-2 rounded-lg bg-gray-100 dark:bg-brand-cardDark text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-gray-700 transition">
+          <i data-lucide="sun" class="w-5 h-5 hidden dark:block"></i>
+          <i data-lucide="moon" class="w-5 h-5 block dark:hidden"></i>
+        </button>
+
+        <a href="#tools" class="hidden sm:inline-flex items-center space-x-2 bg-brand-red hover:bg-brand-darkRed text-white px-4 py-2 rounded-lg font-medium text-sm transition shadow-sm">
+          <i data-lucide="sparkles" class="w-4 h-4"></i>
+          <span>Free Tools</span>
+        </a>
+
+        <!-- Mobile Menu Button -->
+        <button id="mobileMenuBtn" class="md:hidden p-2 rounded-lg text-gray-700 dark:text-gray-300">
+          <i data-lucide="menu" class="w-6 h-6"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Nav Drawer -->
+    <div id="mobileMenu" class="hidden md:hidden border-b border-gray-200 dark:border-brand-borderDark bg-white dark:bg-brand-cardDark px-4 pt-2 pb-4 space-y-2">
+      <a href="#topics" class="block px-3 py-2 rounded-md hover:bg-gray-100 dark:hover:bg-brand-borderDark text-base font-medium">Topics</a>
+      <a href="#articles" class="block px-3 py-2 rounded-md hover:bg-gray-100 dark:hover:bg-brand-borderDark text-base font-medium">Guides & Articles</a>
+      <a href="#reviews" class="block px-3 py-2 rounded-md hover:bg-gray-100 dark:hover:bg-brand-borderDark text-base font-medium">Honest Reviews</a>
+      <a href="#tools" class="block px-3 py-2 rounded-md hover:bg-gray-100 dark:hover:bg-brand-borderDark text-base font-medium">Creator Tools</a>
+      <a href="#equipment" class="block px-3 py-2 rounded-md hover:bg-gray-100 dark:hover:bg-brand-borderDark text-base font-medium">Gear Hub</a>
+    </div>
+  </header>
+
+  <!-- ================= HERO SECTION ================= -->
+  <section class="relative py-20 overflow-hidden border-b border-gray-200 dark:border-brand-borderDark bg-gradient-to-b from-red-50/50 dark:from-red-950/10 to-transparent">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      <span class="inline-flex items-center space-x-2 px-3 py-1 rounded-full text-xs font-semibold bg-red-100 dark:bg-red-950/50 text-brand-red dark:text-red-400 mb-6 border border-red-200 dark:border-red-900">
+        <i data-lucide="zap" class="w-3.5 h-3.5"></i>
+        <span>Digital Creator Knowledge Hub</span>
+      </span>
+
+      <h1 class="text-4xl sm:text-6xl font-extrabold tracking-tight text-gray-900 dark:text-white max-w-4xl mx-auto leading-tight">
+        Learn, Create & Grow Online with <span class="text-brand-red">YouTube Alog</span>
+      </h1>
+
+      <p class="mt-6 text-lg sm:text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto font-normal">
+        Practical digital creation tips, step-by-step technical guides, honest software reviews, and useful tools. We make technology easier so you can turn ideas into real results.
+      </p>
+
+      <div class="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a href="#articles" class="w-full sm:w-auto inline-flex items-center justify-center space-x-2 bg-brand-red hover:bg-brand-darkRed text-white px-6 py-3.5 rounded-xl font-semibold text-base shadow-lg transition">
+          <i data-lucide="book-open" class="w-5 h-5"></i>
+          <span>Explore Tutorials</span>
+        </a>
+        <a href="#tools" class="w-full sm:w-auto inline-flex items-center justify-center space-x-2 bg-white dark:bg-brand-cardDark hover:bg-gray-100 dark:hover:bg-brand-borderDark border border-gray-300 dark:border-brand-borderDark px-6 py-3.5 rounded-xl font-semibold text-base text-gray-800 dark:text-white transition">
+          <i data-lucide="wrench" class="w-5 h-5 text-brand-red"></i>
+          <span>Use Free Creator Tools</span>
+        </a>
+      </div>
+
+      <!-- Quick Metrics -->
+      <div class="mt-16 grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto text-center border-t border-gray-200 dark:border-brand-borderDark pt-8">
+        <div>
+          <p class="text-3xl font-extrabold text-brand-red">100+</p>
+          <p class="text-xs text-gray-500 dark:text-gray-400 mt-1 uppercase tracking-wider font-semibold">Practical Guides</p>
+        </div>
+        <div>
+          <p class="text-3xl font-extrabold text-brand-red">50+</p>
+          <p class="text-xs text-gray-500 dark:text-gray-400 mt-1 uppercase tracking-wider font-semibold">Software Reviews</p>
+        </div>
+        <div>
+          <p class="text-3xl font-extrabold text-brand-red">100%</p>
+          <p class="text-xs text-gray-500 dark:text-gray-400 mt-1 uppercase tracking-wider font-semibold">Creator Focused</p>
+        </div>
+        <div>
+          <p class="text-3xl font-extrabold text-brand-red">Free</p>
+          <p class="text-xs text-gray-500 dark:text-gray-400 mt-1 uppercase tracking-wider font-semibold">Open Resources</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= ADSENSE TOP BANNER PLACEHOLDER ================= -->
+  <div class="max-w-7xl mx-auto px-4 my-8 text-center">
+    <div class="p-4 rounded-lg bg-gray-100 dark:bg-brand-cardDark border border-dashed border-gray-300 dark:border-brand-borderDark text-xs text-gray-400">
+      <p class="uppercase tracking-wider font-semibold">Advertisement Slot (AdSense Banner)</p>
+      <!-- Paste actual AdSense Responsive Unit Code Here -->
+    </div>
+  </div>
+
+  <!-- ================= TOPICS / CATEGORIES ================= -->
+  <section id="topics" class="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl font-bold">Explore Content Tracks</h2>
+      <p class="text-gray-600 dark:text-gray-400 mt-2">Everything you need to master online creation</p>
+    </div>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      
+      <div class="p-6 rounded-2xl bg-white dark:bg-brand-cardDark border border-gray-200 dark:border-brand-borderDark hover:shadow-xl transition group">
+        <div class="w-12 h-12 rounded-xl bg-red-100 dark:bg-red-950/50 text-brand-red flex items-center justify-center mb-4 group-hover:scale-110 transition">
+          <i data-lucide="youtube" class="w-6 h-6"></i>
+        </div>
+        <h3 class="text-lg font-bold">YouTube Mastery</h3>
+        <p class="text-sm text-gray-600 dark:text-gray-400 mt-2">Channel setup, algorithm insights, SEO, retention strategies, and thumbnail psychology.</p>
+      </div>
+
+      <div class="p-6 rounded-2xl bg-white dark:bg-brand-cardDark border border-gray-200 dark:border-brand-borderDark hover:shadow-xl transition group">
+        <div class="w-12 h-12 rounded-xl bg-blue-100 dark:bg-blue-950/50 text-blue-600 dark:text-blue-400 flex items-center justify-center mb-4 group-hover:scale-110 transition">
+          <i data-lucide="video" class="w-6 h-6"></i>
+        </div>
+        <h3 class="text-lg font-bold">Content Creation</h3>
+        <p class="text-sm text-gray-600 dark:text-gray-400 mt-2">Video editing workflows, camera setups, audio gear tuning, and scripting templates.</p>
+      </div>
+
+      <div class="p-6 rounded-2xl bg-white dark:bg-brand-cardDark border border-gray-200 dark:border-brand-borderDark hover:shadow-xl transition group">
+        <div class="w-12 h-12 rounded-xl bg-purple-100 dark:bg-purple-950/50 text-purple-600 dark:text-purple-400 flex items-center justify-center mb-4 group-hover:scale-110 transition">
+          <i data-lucide="cpu" class="w-6 h-6"></i>
+        </div>
+        <h3 class="text-lg font-bold">AI & Digital Tools</h3>
+        <p class="text-sm text-gray-600 dark:text-gray-400 mt-2">Generative AI software, productivity apps, video generators, and automation scripts.</p>
+      </div>
+
+      <div class="p-6 rounded-2xl bg-white dark:bg-brand-cardDark border border-gray-200 dark:border-brand-borderDark hover:shadow-xl transition group">
+        <div class="w-12 h-12 rounded-xl bg-emerald-100 dark:bg-emerald-950/50 text-emerald-600 dark:text-emerald-400 flex items-center justify-center mb-4 group-hover:scale-110 transition">
+          <i data-lucide="trending-up" class="w-6 h-6"></i>
+        </div>
+        <h3 class="text-lg font-bold">Digital Business</h3>
+        <p class="text-sm text-gray-600 dark:text-gray-400 mt-2">Monetization models, affiliate strategy, digital products, and brand sponsorship pitching.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= ARTICLES & TUTORIALS ================= -->
+  <section id="articles" class="py-16 bg-gray-100/60 dark:bg-brand-cardDark/40 border-y border-gray-200 dark:border-brand-borderDark">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-10">
+        <div>
+          <h2 class="text-3xl font-bold">Latest Tutorials & Guides</h2>
+          <p class="text-gray-600 dark:text-gray-400 mt-1">Step-by-step technical articles crafted for actionable results.</p>
+        </div>
+
+        <!-- Filter / Search -->
+        <div class="flex flex-col sm:flex-row gap-3">
+          <input type="text" id="articleSearch" placeholder="Search guides..." class="px-4 py-2 rounded-xl bg-white dark:bg-brand-dark border border-gray-300 dark:border-brand-borderDark focus:outline-none focus:ring-2 focus:ring-brand-red text-sm" />
+        </div>
+      </div>
+
+      <!-- Article Grid -->
+      <div id="articlesGrid" class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        
+        <!-- Article Card 1 -->
+        <article class="article-card bg-white dark:bg-brand-cardDark rounded-2xl overflow-hidden border border-gray-200 dark:border-brand-borderDark shadow-sm hover:shadow-md transition flex flex-col" data-title="complete youtube channel setup checklist 2026">
+          <div class="p-6 flex-1 flex flex-col">
+            <div class="flex items-center justify-between text-xs text-gray-500 mb-3">
+              <span class="px-2.5 py-1 rounded-md bg-red-100 dark:bg-red-950/60 text-brand-red font-semibold">YouTube Growth</span>
+              <span>8 min read</span>
+            </div>
+            <h3 class="text-xl font-bold mb-2 hover:text-brand-red cursor-pointer transition">Complete YouTube Channel Setup Checklist (2026 Edition)</h3>
+            <p class="text-gray-600 dark:text-gray-400 text-sm flex-1">Configure your channel defaults, layout, brand elements, and advanced upload settings to instantly improve discoverability.</p>
+            <div class="mt-6 pt-4 border-t border-gray-100 dark:border-brand-borderDark flex items-center justify-between text-xs text-gray-500">
+              <span class="font-medium text-gray-700 dark:text-gray-300">By Technical Team</span>
+              <button onclick="alert('Viewing full tutorial guide modal...')" class="text-brand-red font-bold hover:underline flex items-center space-x-1">
+                <span>Read Guide</span>
+                <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Article Card 2 -->
+        <article class="article-card bg-white dark:bg-brand-cardDark rounded-2xl overflow-hidden border border-gray-200 dark:border-brand-borderDark shadow-sm hover:shadow-md transition flex flex-col" data-title="obs studio audio setup clean Crisp microphone sound">
+          <div class="p-6 flex-1 flex flex-col">
+            <div class="flex items-center justify-between text-xs text-gray-500 mb-3">
+              <span class="px-2.5 py-1 rounded-md bg-blue-100 dark:bg-blue-950/60 text-blue-600 font-semibold">Technical Guide</span>
+              <span>12 min read</span>
+            </div>
+            <h3 class="text-xl font-bold mb-2 hover:text-brand-red cursor-pointer transition">OBS Studio Audio Tuning: Get Crisp Microphone Sound</h3>
+            <p class="text-gray-600 dark:text-gray-400 text-sm flex-1">Configure Noise Suppression, Compressor, Equalizer, and Limiter filters in OBS to eliminate background hums completely.</p>
+            <div class="mt-6 pt-4 border-t border-gray-100 dark:border-brand-borderDark flex items-center justify-between text-xs text-gray-500">
+              <span class="font-medium text-gray-700 dark:text-gray-300">By Audio Specialist</span>
+              <button onclick="alert('Viewing full tutorial guide modal...')" class="text-brand-red font-bold hover:underline flex items-center space-x-1">
+                <span>Read Guide</span>
+                <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Article Card 3 -->
+        <article class="article-card bg-white dark:bg-brand-cardDark rounded-2xl overflow-hidden border border-gray-200 dark:border-brand-borderDark shadow-sm hover:shadow-md transition flex flex-col" data-title="top 5 ai video generators tested for YouTube creators">
+          <div class="p-6 flex-1 flex flex-col">
+            <div class="flex items-center justify-between text-xs text-gray-500 mb-3">
+              <span class="px-2.5 py-1 rounded-md bg-purple-100 dark:bg-purple-950/60 text-purple-600 font-semibold">AI Tools</span>
+              <span>6 min read</span>
+            </div>
+            <h3 class="text-xl font-bold mb-2 hover:text-brand-red cursor-pointer transition">Top AI Video Generators Tested for Creators</h3>
+            <p class="text-gray-600 dark:text-gray-400 text-sm flex-1">We benchmarked speed, rendering quality, license restrictions, and pricing across top AI video creation suites.</p>
+            <div class="mt-6 pt-4 border-t border-gray-100 dark:border-brand-borderDark flex items-center justify-between text-xs text-gray-500">
+              <span class="font-medium text-gray-700 dark:text-gray-300">By Tech Reviewer</span>
+              <button onclick="alert('Viewing full tutorial guide modal...')" class="text-brand-red font-bold hover:underline flex items-center space-x-1">
+                <span>Read Guide</span>
+                <i data-lucide="arrow-right" class="w-3.5 h-3.5"></i>
+              </button>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= HONEST REVIEWS SHOWCASE ================= -->
+  <section id="reviews" class="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl font-bold">Honest Product & Software Reviews</h2>
+      <p class="text-gray-600 dark:text-gray-400 mt-2">Unbiased analysis to help you invest in the right creation stack.</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      
+      <!-- Review Item 1 -->
+      <div class="p-6 rounded-2xl bg-white dark:bg-brand-cardDark border border-gray-200 dark:border-brand-borderDark shadow-sm flex flex-col justify-between">
+        <div>
+          <div class="flex items-center justify-between mb-4">
+            <span class="text-xs font-bold text-emerald-600 dark:text-emerald-400 bg-emerald-100 dark:bg-emerald-950/60 px-3 py-1 rounded-full">Recommended</span>
+            <div class="flex text-amber-400">
+              <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+            </div>
+          </div>
+          <h3 class="text-xl font-bold mb-2">Descript All-In-One Video & Podcast Editor</h3>
+          <p class="text-sm text-gray-600 dark:text-gray-400">Text-based video editing software designed to speed up talking-head video editing by 3x.</p>
+          
+          <div class="grid grid-cols-2 gap-4 my-4 text-xs">
+            <div class="p-3 rounded-lg bg-green-50 dark:bg-green-950/30 text-green-800 dark:text-green-300">
+              <strong class="block mb-1 font-bold">Pros:</strong>
+              • Edit video by editing text<br>• Studio sound AI voice fix<br>• Automatic filler word removal
+            </div>
+            <div class="p-3 rounded-lg bg-red-50 dark:bg-red-950/30 text-red-800 dark:text-red-300">
+              <strong class="block mb-1 font-bold">Cons:</strong>
+              • High CPU usage on export<br>• Subscription required for HD
+            </div>
+          </div>
+        </div>
+        <p class="text-xs text-gray-500 font-semibold mt-2">Verdict: Essential for educational and commentary creators.</p>
+      </div>
+
+      <!-- Review Item 2 -->
+      <div class="p-6 rounded-2xl bg-white dark:bg-brand-cardDark border border-gray-200 dark:border-brand-borderDark shadow-sm flex flex-col justify-between">
+        <div>
+          <div class="flex items-center justify-between mb-4">
+            <span class="text-xs font-bold text-amber-600 dark:text-amber-400 bg-amber-100 dark:bg-amber-950/60 px-3 py-1 rounded-full">Good Value</span>
+            <div class="flex text-amber-400">
+              <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+              <i data-lucide="star-half" class="w-4 h-4 fill-current"></i>
+            </div>
+          </div>
+          <h3 class="text-xl font-bold mb-2">Elgato Wave:3 USB Microphone</h3>
+          <p class="text-sm text-gray-600 dark:text-gray-400">Condenser microphone equipped with digital mixing software Wave Link built specifically for streamers.</p>
+          
+          <div class="grid grid-cols-2 gap-4 my-4 text-xs">
+            <div class="p-3 rounded-lg bg-green-50 dark:bg-green-950/30 text-green-800 dark:text-green-300">
+              <strong class="block mb-1 font-bold">Pros:</strong>
+              • Anti-distortion Clipguard tech<br>• Intuitive Wave Link software<br>• Plug and play
+            </div>
+            <div class="p-3 rounded-lg bg-red-50 dark:bg-red-950/30 text-red-800 dark:text-red-300">
+              <strong class="block mb-1 font-bold">Cons:</strong>
+              • Plastic chassis construction<br>• Picks up ambient room noise
+            </div>
+          </div>
+        </div>
+        <p class="text-xs text-gray-500 font-semibold mt-2">Verdict: Best entry-level USB microphone for desktop solo creators.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= INTERACTIVE CREATOR TOOLS ================= -->
+  <section id="tools" class="py-16 bg-gray-100/60 dark:bg-brand-cardDark/40 border-y border-gray-200 dark:border-brand-borderDark">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold">Interactive Creator Suite</h2>
+        <p class="text-gray-600 dark:text-gray-400 mt-2">Free utility tools to boost your content workflow instantly.</p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+        
+        <!-- Tool 1: Title & Tag Generator Simulator -->
+        <div class="p-6 bg-white dark:bg-brand-cardDark rounded-2xl border border-gray-200 dark:border-brand-borderDark shadow-sm">
+          <div class="flex items-center space-x-3 mb-4">
+            <div class="p-2.5 rounded-lg bg-red-100 dark:bg-red-950 text-brand-red">
+              <i data-lucide="sparkles" class="w-5 h-5"></i>
+            </div>
+            <h3 class="text-xl font-bold">YouTube Title & Tag Helper</h3>
+          </div>
+          <p class="text-sm text-gray-600 dark:text-gray-400 mb-4">Enter your core topic keyword to generate high-CTR video title ideas and SEO tag suggestions.</p>
+
+          <div class="space-y-4">
+            <div>
+              <label class="block text-xs font-semibold mb-1">Target Keyword / Topic</label>
+              <div class="flex gap-2">
+                <input type="text" id="toolKeyword" placeholder="e.g. Video Editing Tips" class="flex-1 px-4 py-2.5 rounded-xl bg-gray-50 dark:bg-brand-dark border border-gray-300 dark:border-brand-borderDark focus:outline-none focus:ring-2 focus:ring-brand-red text-sm" />
+                <button id="btnGenerateTitles" class="bg-brand-red hover:bg-brand-darkRed text-white px-5 py-2.5 rounded-xl font-semibold text-sm transition">Generate</button>
+              </div>
+            </div>
+
+            <div id="toolResults" class="hidden space-y-3 pt-4 border-t border-gray-200 dark:border-brand-borderDark">
+              <div>
+                <span class="text-xs font-bold text-gray-500 uppercase tracking-wider">Suggested Titles:</span>
+                <ul id="titleList" class="mt-2 space-y-1 text-sm text-gray-800 dark:text-gray-200"></ul>
+              </div>
+              <div class="pt-2">
+                <span class="text-xs font-bold text-gray-500 uppercase tracking-wider">SEO Tags:</span>
+                <p id="tagList" class="mt-1 text-xs bg-gray-100 dark:bg-brand-dark p-3 rounded-lg font-mono text-gray-700 dark:text-gray-300"></p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tool 2: Interactive Channel Growth Checklist -->
+        <div class="p-6 bg-white dark:bg-brand-cardDark rounded-2xl border border-gray-200 dark:border-brand-borderDark shadow-sm">
+          <div class="flex items-center justify-between mb-4">
+            <div class="flex items-center space-x-3">
+              <div class="p-2.5 rounded-lg bg-emerald-100 dark:bg-emerald-950 text-emerald-600">
+                <i data-lucide="check-circle" class="w-5 h-5"></i>
+              </div>
+              <h3 class="text-xl font-bold">Channel Launch Readiness</h3>
+            </div>
+            <span id="checklistProgress" class="text-xs font-bold px-2.5 py-1 rounded-full bg-emerald-100 text-emerald-700 dark:bg-emerald-950 dark:text-emerald-300">0% Done</span>
+          </div>
+
+          <p class="text-sm text-gray-600 dark:text-gray-400 mb-4">Check off mandatory optimization tasks before publishing your next upload.</p>
+
+          <div class="space-y-2 text-sm" id="checklistContainer">
+            <label class="flex items-center space-x-3 p-2.5 rounded-lg hover:bg-gray-50 dark:hover:bg-brand-dark cursor-pointer transition">
+              <input type="checkbox" class="chkItem rounded text-brand-red focus:ring-brand-red w-4 h-4" />
+              <span>Custom 16:9 Thumbnail optimized for high contrast mobile screens</span>
+            </label>
+            <label class="flex items-center space-x-3 p-2.5 rounded-lg hover:bg-gray-50 dark:hover:bg-brand-dark cursor-pointer transition">
+              <input type="checkbox" class="chkItem rounded text-brand-red focus:ring-brand-red w-4 h-4" />
+              <span>Hook planned in the first 30 seconds of the video script</span>
+            </label>
+            <label class="flex items-center space-x-3 p-2.5 rounded-lg hover:bg-gray-50 dark:hover:bg-brand-dark cursor-pointer transition">
+              <input type="checkbox" class="chkItem rounded text-brand-red focus:ring-brand-red w-4 h-4" />
+              <span>First 2 lines of video description contain main search terms</span>
+            </label>
+            <label class="flex items-center space-x-3 p-2.5 rounded-lg hover:bg-gray-50 dark:hover:bg-brand-dark cursor-pointer transition">
+              <input type="checkbox" class="chkItem rounded text-brand-red focus:ring-brand-red w-4 h-4" />
+              <span>Video chapters / timestamps added to video description</span>
+            </label>
+            <label class="flex items-center space-x-3 p-2.5 rounded-lg hover:bg-gray-50 dark:hover:bg-brand-dark cursor-pointer transition">
+              <input type="checkbox" class="chkItem rounded text-brand-red focus:ring-brand-red w-4 h-4" />
+              <span>End screens and info cards linked to related videos</span>
+            </label>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= ADSENSE MID BANNER PLACEHOLDER ================= -->
+  <div class="max-w-7xl mx-auto px-4 my-8 text-center">
+    <div class="p-4 rounded-lg bg-gray-100 dark:bg-brand-cardDark border border-dashed border-gray-300 dark:border-brand-borderDark text-xs text-gray-400">
+      <p class="uppercase tracking-wider font-semibold">Advertisement Slot (In-Article AdSense Unit)</p>
+    </div>
+  </div>
+
+  <!-- ================= GEAR & EQUIPMENT RECOMMENDER ================= -->
+  <section id="equipment" class="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-10">
+      <h2 class="text-3xl font-bold">Recommended Gear & Tech Hub</h2>
+      <p class="text-gray-600 dark:text-gray-400 mt-2">Filter studio setups tailored to your budget level.</p>
+    </div>
+
+    <!-- Filter Buttons -->
+    <div class="flex justify-center gap-3 mb-8">
+      <button onclick="filterGear('all')" class="gear-btn active px-4 py-2 rounded-xl text-xs font-bold bg-brand-red text-white transition">All Gear</button>
+      <button onclick="filterGear('starter')" class="gear-btn px-4 py-2 rounded-xl text-xs font-bold bg-gray-200 dark:bg-brand-cardDark text-gray-700 dark:text-gray-300 transition">Starter ($0 - $150)</button>
+      <button onclick="filterGear('pro')" class="gear-btn px-4 py-2 rounded-xl text-xs font-bold bg-gray-200 dark:bg-brand-cardDark text-gray-700 dark:text-gray-300 transition">Pro Studio ($500+)</button>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6" id="gearGrid">
+      
+      <div class="gear-card starter p-6 bg-white dark:bg-brand-cardDark rounded-2xl border border-gray-200 dark:border-brand-borderDark">
+        <div class="text-xs font-bold text-blue-600 mb-2">Microphone</div>
+        <h4 class="font-bold text-lg mb-1">Fifine K669B USB Mic</h4>
+        <p class="text-xs text-gray-500 mb-4">Budget plug-and-play microphone delivering surprising vocal clarity for beginners.</p>
+        <span class="text-sm font-extrabold text-brand-red">~$30 USD</span>
+      </div>
+
+      <div class="gear-card starter p-6 bg-white dark:bg-brand-cardDark rounded-2xl border border-gray-200 dark:border-brand-borderDark">
+        <div class="text-xs font-bold text-blue-600 mb-2">Lighting</div>
+        <h4 class="font-bold text-lg mb-1">10" Ring Light with Tripod</h4>
+        <p class="text-xs text-gray-500 mb-4">Simple dimmable USB ring light for talking head videos and webcam streaming.</p>
+        <span class="text-sm font-extrabold text-brand-red">~$25 USD</span>
+      </div>
+
+      <div class="gear-card pro p-6 bg-white dark:bg-brand-cardDark rounded-2xl border border-gray-200 dark:border-brand-borderDark">
+        <div class="text-xs font-bold text-purple-600 mb-2">Microphone (Pro)</div>
+        <h4 class="font-bold text-lg mb-1">Shure SM7B + Cloudlifter</h4>
+        <p class="text-xs text-gray-500 mb-4">Industry standard broadcast dynamic vocal microphone for podcasts and streams.</p>
+        <span class="text-sm font-extrabold text-brand-red">~$550 USD</span>
+      </div>
+
+      <div class="gear-card pro p-6 bg-white dark:bg-brand-cardDark rounded-2xl border border-gray-200 dark:border-brand-borderDark">
+        <div class="text-xs font-bold text-purple-600 mb-2">Camera (Pro)</div>
+        <h4 class="font-bold text-lg mb-1">Sony Alpha ZV-E10</h4>
+        <p class="text-xs text-gray-500 mb-4">Mirrorless interchangeable lens vlogging camera with crisp fast autofocus.</p>
+        <span class="text-sm font-extrabold text-brand-red">~$700 USD</span>
+      </div>
+
+      <div class="gear-card pro p-6 bg-white dark:bg-brand-cardDark rounded-2xl border border-gray-200 dark:border-brand-borderDark">
+        <div class="text-xs font-bold text-purple-600 mb-2">Key Light</div>
+        <h4 class="font-bold text-lg mb-1">Godox SL60W LED Video Light</h4>
+        <p class="text-xs text-gray-500 mb-4">Professional continuous 60W LED key light source with softbox attachment capability.</p>
+        <span class="text-sm font-extrabold text-brand-red">~$140 USD</span>
+      </div>
+
+      <div class="gear-card starter p-6 bg-white dark:bg-brand-cardDark rounded-2xl border border-gray-200 dark:border-brand-borderDark">
+        <div class="text-xs font-bold text-blue-600 mb-2">Software</div>
+        <h4 class="font-bold text-lg mb-1">OBS Studio (Free)</h4>
+        <p class="text-xs text-gray-500 mb-4">Open source screen recorder and live broadcast suite used worldwide.</p>
+        <span class="text-sm font-extrabold text-emerald-600">Free / Open Source</span>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= FOOTER & LEGAL (ADSENSE REQUIRED) ================= -->
+  <footer class="bg-white dark:bg-brand-dark border-t border-gray-200 dark:border-brand-borderDark pt-12 pb-8">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+        <div class="col-span-1 md:col-span-2">
+          <a href="#" class="flex items-center space-x-2 mb-4">
+            <div class="bg-brand-red text-white p-2 rounded-lg">
+              <i data-lucide="play" class="w-4 h-4 fill-current"></i>
+            </div>
+            <span class="text-lg font-bold tracking-tight">YouTube <span class="text-brand-red">Alog</span></span>
+          </a>
+          <p class="text-sm text-gray-600 dark:text-gray-400 max-w-sm">
+            YouTube Alog is a digital creator platform dedicated to helping creators, entrepreneurs, and technology enthusiasts learn, create, and grow online.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="text-xs font-bold uppercase tracking-wider text-gray-500 mb-4">Navigation</h4>
+          <ul class="space-y-2 text-sm text-gray-600 dark:text-gray-400">
+            <li><a href="#topics" class="hover:text-brand-red transition">Topics</a></li>
+            <li><a href="#articles" class="hover:text-brand-red transition">Tutorials</a></li>
+            <li><a href="#reviews" class="hover:text-brand-red transition">Reviews</a></li>
+            <li><a href="#tools" class="hover:text-brand-red transition">Creator Tools</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="text-xs font-bold uppercase tracking-wider text-gray-500 mb-4">Legal & Policy</h4>
+          <ul class="space-y-2 text-sm text-gray-600 dark:text-gray-400">
+            <li><button onclick="openModal('privacyModal')" class="hover:text-brand-red transition">Privacy Policy</button></li>
+            <li><button onclick="openModal('termsModal')" class="hover:text-brand-red transition">Terms of Service</button></li>
+            <li><button onclick="openModal('contactModal')" class="hover:text-brand-red transition">Contact Us</button></li>
+            <li><button onclick="openModal('aboutModal')" class="hover:text-brand-red transition">About Us</button></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="border-t border-gray-200 dark:border-brand-borderDark pt-6 flex flex-col sm:flex-row items-center justify-between text-xs text-gray-500">
+        <p>&copy; 2026 YouTube Alog. All rights reserved.</p>
+        <p class="mt-2 sm:mt-0">Designed for content creators worldwide.</p>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ================= MODALS FOR LEGAL PAGES (ADSENSE REQS) ================= -->
+  
+  <!-- Privacy Policy Modal -->
+  <div id="privacyModal" class="hidden fixed inset-0 z-50 bg-black/60 backdrop-blur-sm flex items-center justify-center p-4">
+    <div class="bg-white dark:bg-brand-cardDark max-w-2xl w-full p-6 rounded-2xl max-h-[80vh] overflow-y-auto border border-gray-200 dark:border-brand-borderDark">
+      <h3 class="text-2xl font-bold mb-4">Privacy Policy</h3>
+      <div class="text-sm text-gray-600 dark:text-gray-300 space-y-3">
+        <p>At YouTube Alog, accessible from your domain, one of our main priorities is the privacy of our visitors. This Privacy Policy document contains types of information that is collected and recorded by YouTube Alog and how we use it.</p>
+        <p><strong>Log Files:</strong> YouTube Alog follows a standard procedure of using log files. These files log visitors when they visit websites.</p>
+        <p><strong>Google DoubleClick DART Cookie:</strong> Google is one of a third-party vendor on our site. It also uses cookies, known as DART cookies, to serve ads to our site visitors based upon their visit to www.website.com and other sites on the internet.</p>
+      </div>
+      <button onclick="closeModal('privacyModal')" class="mt-6 bg-brand-red text-white px-4 py-2 rounded-xl text-sm font-semibold">Close</button>
+    </div>
+  </div>
+
+  <!-- Terms Modal -->
+  <div id="termsModal" class="hidden fixed inset-0 z-50 bg-black/60 backdrop-blur-sm flex items-center justify-center p-4">
+    <div class="bg-white dark:bg-brand-cardDark max-w-2xl w-full p-6 rounded-2xl max-h-[80vh] overflow-y-auto border border-gray-200 dark:border-brand-borderDark">
+      <h3 class="text-2xl font-bold mb-4">Terms of Service</h3>
+      <div class="text-sm text-gray-600 dark:text-gray-300 space-y-3">
+        <p>By accessing this website we assume you accept these terms and conditions. Do not continue to use YouTube Alog if you do not agree to take all of the terms and conditions stated on this page.</p>
+      </div>
+      <button onclick="closeModal('termsModal')" class="mt-6 bg-brand-red text-white px-4 py-2 rounded-xl text-sm font-semibold">Close</button>
+    </div>
+  </div>
+
+  <!-- Contact Modal -->
+  <div id="contactModal" class="hidden fixed inset-0 z-50 bg-black/60 backdrop-blur-sm flex items-center justify-center p-4">
+    <div class="bg-white dark:bg-brand-cardDark max-w-md w-full p-6 rounded-2xl border border-gray-200 dark:border-brand-borderDark">
+      <h3 class="text-2xl font-bold mb-4">Contact YouTube Alog</h3>
+      <form onsubmit="event.preventDefault(); alert('Message sent!'); closeModal('contactModal');" class="space-y-4">
+        <div>
+          <label class="block text-xs font-semibold mb-1">Your Name</label>
+          <input type="text" required class="w-full px-3 py-2 rounded-xl bg-gray-50 dark:bg-brand-dark border border-gray-300 dark:border-brand-borderDark text-sm" />
+        </div>
+        <div>
+          <label class="block text-xs font-semibold mb-1">Your Email</label>
+          <input type="email" required class="w-full px-3 py-2 rounded-xl bg-gray-50 dark:bg-brand-dark border border-gray-300 dark:border-brand-borderDark text-sm" />
+        </div>
+        <div>
+          <label class="block text-xs font-semibold mb-1">Message</label>
+          <textarea required rows="3" class="w-full px-3 py-2 rounded-xl bg-gray-50 dark:bg-brand-dark border border-gray-300 dark:border-brand-borderDark text-sm"></textarea>
+        </div>
+        <div class="flex justify-end space-x-2">
+          <button type="button" onclick="closeModal('contactModal')" class="px-4 py-2 text-sm text-gray-500">Cancel</button>
+          <button type="submit" class="bg-brand-red text-white px-4 py-2 rounded-xl text-sm font-semibold">Send Message</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- About Modal -->
+  <div id="aboutModal" class="hidden fixed inset-0 z-50 bg-black/60 backdrop-blur-sm flex items-center justify-center p-4">
+    <div class="bg-white dark:bg-brand-cardDark max-w-2xl w-full p-6 rounded-2xl border border-gray-200 dark:border-brand-borderDark">
+      <h3 class="text-2xl font-bold mb-4">About YouTube Alog</h3>
+      <p class="text-sm text-gray-600 dark:text-gray-300 leading-relaxed">
+        YouTube Alog is a digital creator platform dedicated to helping creators, entrepreneurs, and technology enthusiasts learn, create, and grow online. We provide practical digital creation tips, technical guides, step-by-step tutorials, honest reviews, and useful insights covering YouTube, content creation, online tools, technology, and digital business.
+      </p>
+      <button onclick="closeModal('aboutModal')" class="mt-6 bg-brand-red text-white px-4 py-2 rounded-xl text-sm font-semibold">Close</button>
+    </div>
+  </div>
+
+  <!-- ================= JAVASCRIPT LOGIC ================= -->
+  <script>
+    // Initialize Lucide Icons
+    lucide.createIcons();
+
+    // Dark / Light Theme Toggle
+    const themeToggleBtn = document.getElementById('themeToggle');
+    themeToggleBtn.addEventListener('click', () => {
+      document.documentElement.classList.toggle('dark');
+    });
+
+    // Mobile Menu Toggle
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    mobileMenuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    // Article Search Filter
+    const articleSearch = document.getElementById('articleSearch');
+    const articleCards = document.querySelectorAll('.article-card');
+
+    articleSearch.addEventListener('input', (e) => {
+      const term = e.target.value.toLowerCase().trim();
+      articleCards.forEach(card => {
+        const title = card.getAttribute('data-title').toLowerCase();
+        if (title.includes(term)) {
+          card.style.display = 'flex';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    });
+
+    // Tool: Title Generator
+    document.getElementById('btnGenerateTitles').addEventListener('click', () => {
+      const kw = document.getElementById('toolKeyword').value.trim();
+      if (!kw) return alert('Please enter a keyword');
+
+      const titleList = document.getElementById('titleList');
+      const tagList = document.getElementById('tagList');
+      const results = document.getElementById('toolResults');
+
+      titleList.innerHTML = `
+        <li>• How to Master <strong>${kw}</strong> in 2026 (Full Guide)</li>
+        <li>• 7 Game-Changing <strong>${kw}</strong> Mistakes You Must Avoid</li>
+        <li>• The Ultimate <strong>${kw}</strong> Blueprint for Beginners</li>
+      `;
+
+      tagList.innerText = `${kw.toLowerCase()}, ${kw.toLowerCase()} tutorial, best ${kw.toLowerCase()}, ${kw.toLowerCase()} 2026, how to ${kw.toLowerCase()}, creator tips`;
+
+      results.classList.remove('hidden');
+    });
+
+    // Tool: Checklist Progress
+    const checkboxes = document.querySelectorAll('.chkItem');
+    const progressSpan = document.getElementById('checklistProgress');
+
+    checkboxes.forEach(chk => {
+      chk.addEventListener('change', () => {
+        const checkedCount = document.querySelectorAll('.chkItem:checked').length;
+        const total = checkboxes.length;
+        const pct = Math.round((checkedCount / total) * 100);
+        progressSpan.innerText = `${pct}% Done`;
+      });
+    });
+
+    // Gear Filter
+    function filterGear(category) {
+      const cards = document.querySelectorAll('.gear-card');
+      const btns = document.querySelectorAll('.gear-btn');
+
+      btns.forEach(b => b.classList.remove('bg-brand-red', 'text-white'));
+      event.target.classList.add('bg-brand-red', 'text-white');
+
+      cards.forEach(c => {
+        if (category === 'all' || c.classList.contains(category)) {
+          c.style.display = 'block';
+        } else {
+          c.style.display = 'none';
+        }
+      });
+    }
+
+    // Modal Helpers
+    function openModal(id) {
+      document.getElementById(id).classList.remove('hidden');
+    }
+    function closeModal(id) {
+      document.getElementById(id).classList.add('hidden');
+    }
+  </script>
+</body>
+</html>
